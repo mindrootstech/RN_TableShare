@@ -14,6 +14,6 @@ module.exports = {
         allowUndefined: true,
       },
     ],
-    ['react-native-worklets/plugin'], // keep this LAST
+    ['react-native-worklets/plugin'], 
   ],
 };
