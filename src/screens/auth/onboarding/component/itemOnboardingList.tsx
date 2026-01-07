@@ -1,11 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Animated, {
   interpolate,
   SharedValue,
   useAnimatedStyle,
 } from 'react-native-reanimated';
-import { useTranslation } from 'react-i18next';
 
 import {
   HEIGHT_SCREEN,
@@ -16,7 +16,7 @@ import { TranslationKeys } from '../../../../i18n/language';
 import { IArrOnBoardingData } from '../../../../modelTypeScript';
 import { ColorsApp } from '../../../../utilities/colors';
 import { Fonts } from '../../../../utilities/fonts';
-import ButtonCustom from '../../../components/buttonCustom';
+import ButtonCustomOnBoarding from '../../../components/buttonCustomOnBoarding';
 
 type Props = {
   item: IArrOnBoardingData;
@@ -96,7 +96,7 @@ const ItemOnboardingList = ({ item, index, scrollX, onPressNext }: Props) => {
       </Animated.View>
 
       <Animated.View style={buttonNextStyle}>
-        <ButtonCustom
+        <ButtonCustomOnBoarding
           title={t(TranslationKeys.NEXT)}
           style={styles.btnNext}
           onPress={onPressNext}

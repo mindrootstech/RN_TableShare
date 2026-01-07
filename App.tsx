@@ -4,7 +4,6 @@ import { I18nextProvider } from 'react-i18next';
 import { LogBox, StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import i18n from './src/i18n';
-import Welcome from './src/screens/welcome';
 import AuthNavigation from './src/navigation/AuthNavigation';
 
 LogBox.ignoreAllLogs();

@@ -9,4 +9,9 @@ export const ColorsApp = {
   txtDescColor: '#111827',
   borderColor: '#0000004D',
   lightSilver: '#D9D9D9',
+  grey: '#717D85',
+  black17: '#171717',
+  black1F: '#1F1F1F',
+  grayE9: '#E9E9E9',
+  blur: '#000000B8',
 };

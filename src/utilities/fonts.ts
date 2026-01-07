@@ -3,9 +3,19 @@ import { ColorsApp } from './colors';
 
 export const Fonts = StyleSheet.create({
   // Noto Sans Light
+  fontNotoSansLight10: {
+    fontFamily: 'NotoSans-Light',
+    fontSize: 10,
+    color: ColorsApp.txtDescColor,
+  },
   fontNotoSansLight12: {
     fontFamily: 'NotoSans-Light',
     fontSize: 12,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansLight13: {
+    fontFamily: 'NotoSans-Light',
+    fontSize: 13,
     color: ColorsApp.txtDescColor,
   },
 
@@ -29,6 +39,11 @@ export const Fonts = StyleSheet.create({
   },
 
   // Noto Sans SemiBold
+  fontNotoSansSemiBold8: {
+    fontFamily: 'NotoSans-SemiBold',
+    fontSize: 8,
+    color: ColorsApp.txtDescColor,
+  },
   fontNotoSansSemiBold12: {
     fontFamily: 'NotoSans-SemiBold',
     fontSize: 12,
@@ -42,6 +57,11 @@ export const Fonts = StyleSheet.create({
   fontNotoSansSemiBold16: {
     fontFamily: 'NotoSans-SemiBold',
     fontSize: 16,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansSemiBold18: {
+    fontFamily: 'NotoSans-SemiBold',
+    fontSize: 18,
     color: ColorsApp.txtDescColor,
   },
   fontNotoSansSemiBold24: {

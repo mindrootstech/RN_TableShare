@@ -5997,6 +5997,11 @@ react-native-highlight-word@^1.0.5:
   resolved "https://registry.npmjs.org/react-native-highlight-word/-/react-native-highlight-word-1.0.5.tgz"
   integrity sha512-fgGIr/WFHcbH4vXKh3qDcobxdYJBzFhHdExSxT7nldc+4U7np3Pc7eD2VZHGxpziODaoEuhne4MN//Ta5xlQHw==
 
+react-native-highlighter@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/react-native-highlighter/-/react-native-highlighter-1.0.7.tgz"
+  integrity sha512-s2kXiwh6tkFfWNC8mE0tYkeaSHCYLATDlTXPThzI4OPpUWP00zeez2ebNFztAOpZE/TJCCaXpi7F0hELUnwpUA==
+
 react-native-image-crop-picker@^0.51.1:
   version "0.51.1"
   resolved "https://registry.npmjs.org/react-native-image-crop-picker/-/react-native-image-crop-picker-0.51.1.tgz"

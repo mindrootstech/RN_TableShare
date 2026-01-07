@@ -2,9 +2,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 
 import 'react-native-gesture-handler';
-import Home from '../screens/app/home/home';
+import BottomTabsNavigation from './BottomTabNavigation';
 
-export type AppStackRoots = {
+type AppStackRoots = {
+  BottomTabsNavigation: undefined;
   Home: undefined;
 };
 
@@ -21,11 +22,8 @@ const AppNavigation = () => {
       }}
     >
       <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{
-          headerShown: false,
-        }}
+        name="BottomTabsNavigation"
+        component={BottomTabsNavigation}
       />
     </Stack.Navigator>
   );

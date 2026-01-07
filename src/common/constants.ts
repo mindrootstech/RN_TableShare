@@ -1,5 +1,5 @@
 import { Dimensions } from 'react-native';
-import { IArrOnBoardingData } from '../modelTypeScript';
+import { IArrOnBoardingData, IArrSignUpFields } from '../modelTypeScript';
 
 export const spaceHorizontalAuth = 30;
 export const spaceLeftRight = 20;
@@ -26,5 +26,42 @@ export const arrOnBoardingData: IArrOnBoardingData[] = [
     image: require('../assets/png/pngOnBoarding2.png'),
     title: 'Buy Local, Sell Local',
     desc: 'Farmers sell directly to customers nearby. Order online and collect straight from the vendor.',
+  },
+];
+
+export const arrSignUpFields: IArrSignUpFields[] = [
+  {
+    key: 'firstName',
+    label: 'First Name *',
+    placeholder: 'Enter your first name',
+  },
+  {
+    key: 'lastName',
+    label: 'Last Name *',
+    placeholder: 'Enter your last name',
+  },
+  {
+    key: 'email',
+    label: 'Email *',
+    placeholder: 'Enter your email',
+    keyboardType: 'email-address',
+  },
+  {
+    key: 'phone',
+    label: 'Phone Number *',
+    placeholder: 'Enter your phone number',
+    keyboardType: 'phone-pad',
+  },
+  {
+    key: 'password',
+    label: 'Password *',
+    placeholder: 'Enter password',
+    secureTextEntry: true,
+  },
+  {
+    key: 'confirmPassword',
+    label: 'Confirm Password',
+    placeholder: 'Enter confirm password',
+    secureTextEntry: true,
   },
 ];

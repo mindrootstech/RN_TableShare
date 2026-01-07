@@ -10,6 +10,7 @@ import {
 import { ColorsApp } from '../../utilities/colors';
 import { Fonts } from '../../utilities/fonts';
 // import TriggerHaptic from '../../utilities/triggerHaptic';
+import { LinearGradient } from 'react-native-linear-gradient';
 
 type IPropsButtonGlobal = PropsWithChildren<{
   title?: string;
@@ -22,7 +23,7 @@ type IPropsButtonGlobal = PropsWithChildren<{
   activeOpacity?: number;
 }>;
 
-const ButtonCustom = ({
+const ButtonCustomOnBoarding = ({
   title,
   style,
   styleTitle,
@@ -41,29 +42,44 @@ const ButtonCustom = ({
         onPress && onPress();
       }}
     >
-      <View style={styles.containerName}>
-        {image ? image : null}
-        <Text allowFontScaling={false} style={[styles.title, styleTitle]}>
-          {title}
-        </Text>
-      </View>
+      <LinearGradient
+        colors={[ColorsApp.greenDark, ColorsApp.greenDark, ColorsApp.green]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 0 }}
+        style={styles.containerLinearGradient}
+      >
+        <View style={styles.txtContainer}>
+          {image ? image : null}
+          <Text allowFontScaling={false} style={[styles.title, styleTitle]}>
+            {title}
+          </Text>
+        </View>
+      </LinearGradient>
     </TouchableOpacity>
   );
 };
 
-export default ButtonCustom;
+export default ButtonCustomOnBoarding;
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    backgroundColor: ColorsApp.green,
+    backgroundColor: ColorsApp.white,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
     borderRadius: 30,
-    height: 52,
-    marginHorizontal: 35,
+    height: 62,
+    paddingHorizontal: 5,
+    borderWidth: 0.5,
+    borderColor: ColorsApp.borderColor,
   },
-  containerName: {
+  containerLinearGradient: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 30,
+    height: 52,
+  },
+  txtContainer: {
     width: '100%',
     justifyContent: 'center',
     alignItems: 'center',

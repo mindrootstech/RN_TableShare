@@ -3,9 +3,13 @@ import React from 'react';
 import 'react-native-gesture-handler';
 import OnBoarding from '../screens/auth/onboarding';
 import { ColorsApp } from '../utilities/colors';
+import Login from '../screens/auth/login';
+import SignUp from '../screens/auth/signUp';
 
 export type AuthStackRoots = {
-  InitialScreen: undefined;
+  Login: undefined;
+  SignUp: undefined;
+  OnBoarding: undefined;
 };
 
 const Stack = createStackNavigator<AuthStackRoots>();
@@ -28,7 +32,21 @@ const AuthNavigation = () => {
       }}
     >
       <Stack.Screen
-        name="InitialScreen"
+        name="Login"
+        component={Login}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="SignUp"
+        component={SignUp}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="OnBoarding"
         component={OnBoarding}
         options={{
           headerShown: false,
