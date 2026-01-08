@@ -21,7 +21,7 @@ const ItemProgessDots = ({ index, scrollX }: Props) => {
     const scale = interpolate(
       progress,
       [index - 1, index, index + 1],
-      [0.9, 1.5, 0.9],
+      [0.9, 1.2, 0.9],
       'clamp',
     );
 

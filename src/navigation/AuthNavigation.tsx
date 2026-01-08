@@ -32,6 +32,13 @@ const AuthNavigation = () => {
       }}
     >
       <Stack.Screen
+        name="OnBoarding"
+        component={OnBoarding}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
         name="Login"
         component={Login}
         options={{
@@ -41,13 +48,6 @@ const AuthNavigation = () => {
       <Stack.Screen
         name="SignUp"
         component={SignUp}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen
-        name="OnBoarding"
-        component={OnBoarding}
         options={{
           headerShown: false,
         }}

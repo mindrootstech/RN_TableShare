@@ -5,6 +5,9 @@ import { LogBox, StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import i18n from './src/i18n';
 import AuthNavigation from './src/navigation/AuthNavigation';
+import Welcome from './src/screens/welcome';
+import { Provider } from 'react-redux';
+import store from './src/redux/store';
 
 LogBox.ignoreAllLogs();
 
@@ -13,12 +16,14 @@ function App(): React.JSX.Element {
 
   return (
     <SafeAreaProvider style={styles.container}>
-      <NavigationContainer>
-        <I18nextProvider i18n={i18n}>
-          {/* <Welcome /> */}
-          <AuthNavigation />
-        </I18nextProvider>
-      </NavigationContainer>
+      <Provider store={store}>
+        <NavigationContainer>
+          <I18nextProvider i18n={i18n}>
+            <Welcome />
+            {/* <AuthNavigation /> */}
+          </I18nextProvider>
+        </NavigationContainer>
+      </Provider>
     </SafeAreaProvider>
   );
 }
