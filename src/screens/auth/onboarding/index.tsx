@@ -13,8 +13,11 @@ import {
 import { ColorsApp } from '../../../utilities/colors';
 import ItemOnboardingList from './component/itemOnboardingList';
 import ItemProgessDots from './component/itemProgessDots';
+import { useAppDispatch } from '../../../redux/reduxStore';
+import { loginUser } from '../../../redux/slices/authSlice';
 
 const OnBoarding = () => {
+  const dispatch = useAppDispatch();
   const scrollX = useSharedValue(0);
   const flatListRef = useRef<Animated.FlatList<any>>(null);
 
@@ -31,6 +34,8 @@ const OnBoarding = () => {
         index: nextIndex,
         animated: true,
       });
+    } else {
+      dispatch(loginUser({ isOnBoarding: true }));
     }
   };
 
