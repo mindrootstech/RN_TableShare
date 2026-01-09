@@ -46,11 +46,11 @@ const SignUp = () => {
       color: ColorsApp.green,
       textDecorationLine: 'underline',
     },
-    onPress: keyword => Alert.alert(keyword),
+    onPress: (keyword) => Alert.alert(keyword),
   });
 
   const onChangeText = (key: string, value: string) => {
-    setForm(prev => ({ ...prev, [key]: value }));
+    setForm((prev) => ({ ...prev, [key]: value }));
   };
 
   return (
@@ -83,17 +83,17 @@ const SignUp = () => {
                 {t(TranslationKeys.REGISTER_YOUR_BUISNESS_AS_A_LOCAL)}
               </Text>
               <View style={styles.containerTxtInput}>
-                {arrSignUpFields.map(field => {
+                {arrSignUpFields.map((field) => {
                   const isPassword = field.key === 'password';
                   const isConfirmPassword = field.key === 'confirmPassword';
 
                   return (
                     <TextInputCustom
                       key={field.key}
-                      label={field.label}
-                      placeholder={field.placeholder}
+                      label={t(field.label)}
+                      placeholder={t(field.placeholder)}
                       value={form[field.key as keyof typeof form]}
-                      onChangeText={text => onChangeText(field.key, text)}
+                      onChangeText={(text) => onChangeText(field.key, text)}
                       keyboardType={field.keyboardType}
                       secureTextEntry={
                         isPassword
@@ -109,7 +109,7 @@ const SignUp = () => {
                   style={styles.btnEyeShowPass}
                   onPress={() => {
                     Keyboard.dismiss();
-                    setShowPassword(prev => !prev);
+                    setShowPassword((prev) => !prev);
                   }}
                 >
                   <Images.svgEye />
@@ -118,7 +118,7 @@ const SignUp = () => {
                   style={styles.btnEyeConfirmPass}
                   onPress={() => {
                     Keyboard.dismiss();
-                    setShowConfirmPassword(prev => !prev);
+                    setShowConfirmPassword((prev) => !prev);
                   }}
                 >
                   <Images.svgEye />

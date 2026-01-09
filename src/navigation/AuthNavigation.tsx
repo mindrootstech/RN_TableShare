@@ -20,7 +20,7 @@ const AuthNavigation = () => {
   const { isOnBoarding } = useSelector(authSelector);
   return (
     <Stack.Navigator
-      initialRouteName={isOnBoarding ? 'OnBoarding' : 'Login'}
+      // initialRouteName={isOnBoarding ? 'OnBoarding' : 'Login'}
       screenOptions={{
         headerBackAllowFontScaling: false,
         headerTitleAllowFontScaling: false,

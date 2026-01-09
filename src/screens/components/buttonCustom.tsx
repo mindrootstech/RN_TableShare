@@ -1,4 +1,4 @@
-import React, { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 import {
   StyleSheet,
   Text,
@@ -16,19 +16,46 @@ type IPropsButtonGlobal = PropsWithChildren<{
   style?: ViewStyle;
   styleTitle?: TextStyle;
   disabled?: boolean;
-  showIndicator?: boolean;
   onPress?: () => void;
-  image?: any;
+  icon?: ReactNode;
   activeOpacity?: number;
 }>;
 
+// const ButtonCustom = ({
+//   title,
+//   style,
+//   styleTitle,
+//   disabled,
+//   onPress,
+//   image,
+//   activeOpacity = 0.8,
+// }: IPropsButtonGlobal) => {
+//   return (
+//     <TouchableOpacity
+//       activeOpacity={activeOpacity}
+//       style={[styles.buttonContainer, style]}
+//       disabled={disabled}
+//       onPress={() => {
+//         // TriggerHaptic();
+//         onPress && onPress();
+//       }}
+//     >
+//       <View style={styles.containerName}>
+//         {image ? image : null}
+//         <Text allowFontScaling={false} style={[styles.title, styleTitle]}>
+//           {title}
+//         </Text>
+//       </View>
+//     </TouchableOpacity>
+//   );
+// };
 const ButtonCustom = ({
   title,
   style,
   styleTitle,
   disabled,
   onPress,
-  image,
+  icon,
   activeOpacity = 0.8,
 }: IPropsButtonGlobal) => {
   return (
@@ -36,16 +63,11 @@ const ButtonCustom = ({
       activeOpacity={activeOpacity}
       style={[styles.buttonContainer, style]}
       disabled={disabled}
-      onPress={() => {
-        // TriggerHaptic();
-        onPress && onPress();
-      }}
+      onPress={onPress}
     >
-      <View style={styles.containerName}>
-        {image ? image : null}
-        <Text allowFontScaling={false} style={[styles.title, styleTitle]}>
-          {title}
-        </Text>
+      <View style={styles.containerContent}>
+        {icon && <View style={styles.iconWrapper}>{icon}</View>}
+        <Text style={[styles.title, styleTitle]}>{title}</Text>
       </View>
     </TouchableOpacity>
   );
@@ -53,27 +75,55 @@ const ButtonCustom = ({
 
 export default ButtonCustom;
 
+// const styles = StyleSheet.create({
+//   buttonContainer: {
+//     backgroundColor: ColorsApp.green,
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//     flexDirection: 'row',
+//     borderRadius: 30,
+//     height: 52,
+//     marginHorizontal: 35,
+//   },
+//   containerName: {
+//     width: '100%',
+//     justifyContent: 'center',
+//     alignItems: 'center',
+//     flexDirection: 'row',
+//   },
+//   title: {
+//     textAlign: 'center',
+//     ...Fonts.fontNotoSansSemiBold16,
+//     color: ColorsApp.white,
+//     height: '100%',
+//     width: '100%',
+//   },
+// });
+
 const styles = StyleSheet.create({
   buttonContainer: {
     backgroundColor: ColorsApp.green,
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'row',
     borderRadius: 30,
     height: 52,
     marginHorizontal: 35,
+    justifyContent: 'center',
   },
-  containerName: {
+
+  containerContent: {
     width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  iconWrapper: {
+    marginRight: 8,
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'row',
   },
+
   title: {
-    textAlign: 'center',
     ...Fonts.fontNotoSansSemiBold16,
     color: ColorsApp.white,
-    height: '100%',
-    width: '100%',
   },
 });

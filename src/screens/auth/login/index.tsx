@@ -23,7 +23,7 @@ import { ColorsApp } from '../../../utilities/colors';
 import { Fonts } from '../../../utilities/fonts';
 import ButtonCustom from '../../components/buttonCustom';
 import TextInputCustom from '../../components/textInputCustom';
-import ModalForgotPass from '../components/modalForgotPass';
+import ModalForgotPass from './components/modalForgotPass';
 
 type Props = NativeStackScreenProps<AuthStackRoots, 'Login'>;
 const Login = ({ navigation }: Props) => {
@@ -78,13 +78,13 @@ const Login = ({ navigation }: Props) => {
               label={t(TranslationKeys.EMAIL)}
               placeholder={t(TranslationKeys.ENTER_YOUR_EMAIL_ADD)}
               value={email}
-              onChangeText={text => onChangeTextEmail(text)}
+              onChangeText={(text) => onChangeTextEmail(text)}
             />
             <TextInputCustom
               label={t(TranslationKeys.PASSWORD)}
               placeholder={t(TranslationKeys.ENTER_YOUR_PASS)}
               value={password}
-              onChangeText={text => onChangeTextPassword(text)}
+              onChangeText={(text) => onChangeTextPassword(text)}
             />
           </View>
           <TouchableOpacity

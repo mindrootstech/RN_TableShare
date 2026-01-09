@@ -35,4 +35,18 @@ export default {
   SIGN_UP: 'Sign Up',
   REGISTER_YOUR_BUISNESS_AS_A_LOCAL:
     'Register your business as a local vendor.Start building your local presence.',
+  FIRST_NAME: 'First Name *',
+  ENTER_YOUR_FIRST_NAME: 'Enter your first name',
+  LAST_NAME: 'Last Name *',
+  ENTER_YOUR_LAST_NAME: 'Enter your last name',
+  EMAIL_SIGNUP: 'Email *',
+  ENTER_YOUR_EMAIL: 'Enter your email',
+  PHONE_NUMBER: 'Phone Number *',
+  ENTER_YOUR_PHONE_NUMBER: 'Enter your phone number',
+  PASSWORD_SIGNUP: 'Password *',
+  ENTER_PASSWORD: 'Enter password',
+  CONFIRM_PASSWORD: 'Confirm Password',
+  ENTER_YOUR_PASSWROD: 'Enter confirm password',
+  TERMS_AND_CONDITIONS: 'Terms & Conditions',
+  TERMS_TEXT: 'By creating an account you agree to {{terms}}.',
 };

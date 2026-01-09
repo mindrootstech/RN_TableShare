@@ -21,4 +21,11 @@ export const StylesG = StyleSheet.create({
     : {
         elevation: 8,
       },
+  shadowModal: {
+    shadowColor: '#00001A',
+    shadowOffset: { width: 0, height: -2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 6,
+  },
 });

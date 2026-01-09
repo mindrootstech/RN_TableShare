@@ -2,9 +2,10 @@ import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, {
   interpolate,
-  useAnimatedStyle,
   SharedValue,
+  useAnimatedStyle,
 } from 'react-native-reanimated';
+
 import { WIDTH_SCREEN } from '../../../../common/constants';
 import { ColorsApp } from '../../../../utilities/colors';
 

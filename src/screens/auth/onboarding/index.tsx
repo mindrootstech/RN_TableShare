@@ -16,13 +16,13 @@ import ItemProgessDots from './component/itemProgessDots';
 import { useAppDispatch } from '../../../redux/reduxStore';
 import { loginUser } from '../../../redux/slices/authSlice';
 
-const OnBoarding = () => {
+const OnBoarding = ({ navigation }: any) => {
   const dispatch = useAppDispatch();
   const scrollX = useSharedValue(0);
   const flatListRef = useRef<Animated.FlatList<any>>(null);
 
   const scrollHandler = useAnimatedScrollHandler({
-    onScroll: event => {
+    onScroll: (event) => {
       scrollX.value = event.contentOffset.x;
     },
   });
@@ -35,7 +35,14 @@ const OnBoarding = () => {
         animated: true,
       });
     } else {
-      dispatch(loginUser({ isOnBoarding: true }));
+      console.log('hhh');
+      dispatch(
+        loginUser({
+          isLoggedIn: true,
+          authToken: 'signin',
+          isOnBoarding: true,
+        }),
+      );
     }
   };
 
@@ -44,7 +51,7 @@ const OnBoarding = () => {
       <Animated.FlatList
         ref={flatListRef}
         data={arrOnBoardingData}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={(item) => item.id.toString()}
         horizontal
         pagingEnabled
         showsHorizontalScrollIndicator={false}

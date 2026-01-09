@@ -91,8 +91,8 @@ const ItemOnboardingList = ({ item, index, scrollX, onPressNext }: Props) => {
       </Animated.View>
 
       <Animated.View style={[styles.containerMain, textStyle]}>
-        <Text style={styles.txtTitle}>{item.title}</Text>
-        <Text style={styles.txtDesc}>{item.desc}</Text>
+        <Text style={styles.txtTitle}>{t(item.title)}</Text>
+        <Text style={styles.txtDesc}>{t(item.desc)}</Text>
       </Animated.View>
 
       <Animated.View style={buttonNextStyle}>

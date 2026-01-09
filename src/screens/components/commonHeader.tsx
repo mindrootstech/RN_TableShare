@@ -53,44 +53,55 @@ export default function CommonHeader({
   };
   return (
     <View style={[styles.container, containerStyle]}>
-      {showLeftIcon && (
-        <TouchableOpacity
-          disabled={disableLeftIcon}
-          style={styles.containerBackIcon}
-          onPress={onPressBack}
-          activeOpacity={activeOpacityTouchable}
-        >
-          <Image
-            resizeMode="contain"
-            style={styles.iconStyle}
-            source={leftIcon || Images.pngBackIcon}
-          />
-        </TouchableOpacity>
-      )}
+      <View style={styles.containerSide}>
+        {showLeftIcon && (
+          <TouchableOpacity
+            disabled={disableLeftIcon}
+            style={styles.containerBackIcon}
+            onPress={onPressBack}
+            activeOpacity={activeOpacityTouchable}
+          >
+            <Image
+              resizeMode="contain"
+              style={styles.iconStyle}
+              source={leftIcon || Images.pngBackIcon}
+            />
+          </TouchableOpacity>
+        )}
+      </View>
+
       <Text style={[styles.title, titleStyle]}>{title}</Text>
-      {showRightIcon ? (
-        <TouchableOpacity
-          style={containerRightIcon}
-          onPress={onPressRight}
-          activeOpacity={activeOpacityTouchable}
-        >
-          <Image
-            style={[styles.iconStyle, stylesRightIcon]}
-            source={rightIcon || Images.pngCart}
-          />
-        </TouchableOpacity>
-      ) : (
-        <View style={styles.iconStyle} />
-      )}
+      <View style={styles.containerSide}>
+        {showRightIcon ? (
+          <TouchableOpacity
+            style={containerRightIcon}
+            onPress={onPressRight}
+            activeOpacity={activeOpacityTouchable}
+          >
+            <Image
+              style={[styles.iconStyle, stylesRightIcon]}
+              source={rightIcon || Images.pngCart}
+            />
+          </TouchableOpacity>
+        ) : (
+          <View style={styles.iconStyle} />
+        )}
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
+  },
+  containerSide: {
+    width: 36,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   containerBackIcon: {
     height: 36,

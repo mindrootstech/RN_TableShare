@@ -2999,7 +2999,7 @@ PODS:
     - ReactCommon/turbomodule/core
     - SocketRocket
     - Yoga
-  - RNShare (12.2.2):
+  - RNShare (12.2.1):
     - boost
     - DoubleConversion
     - fast_float
@@ -3497,7 +3497,7 @@ SPEC CHECKSUMS:
   FBLazyVector: 309703e71d3f2f1ed7dc7889d58309c9d77a95a4
   fmt: a40bb5bd0294ea969aaaba240a927bd33d878cdd
   glog: 5683914934d5b6e4240e497e0f4a3b42d1854183
-  hermes-engine: 8c2334588fcbd14826f0a149dda1425ab40f002d
+  hermes-engine: c4dbd8cca75d55f13d5c3a77a23ef5e94fa2745d
   libavif: 84bbb62fb232c3018d6f1bab79beea87e35de7b7
   libdav1d: 23581a4d8ec811ff171ed5e2e05cd27bad64c39f
   libwebp: 02b23773aedb6ff1fd38cec7a77b81414c6842a8
@@ -3583,7 +3583,7 @@ SPEC CHECKSUMS:
   RNReactNativeHapticFeedback: be4f1b4bf0398c30b59b76ed92ecb0a2ff3a69c6
   RNReanimated: 292cd58688552a22b3fc1cefcfbc49b336dfed68
   RNScreens: ffbb0296608eb3560de641a711bbdb663ed1f6b4
-  RNShare: d1c1b7238eac733cb5185513e64cf14db9999637
+  RNShare: 70ae97841ace4522b91cf4b54281493ba3ae16e0
   RNSVG: ba3c3bc3cf413f32d1a7012274fe503c6fc1eadd
   RNWorklets: 69f7239afaf3a156f7f9549eeb0ae8d02adc095f
   SDWebImage: e9c98383c7572d713c1a0d7dd2783b10599b9838

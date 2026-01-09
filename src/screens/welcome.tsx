@@ -28,18 +28,21 @@ const SplashScreen = ({ navigation }: Props) => {
   const { authToken, isLoggedIn } = useSelector(authSelector);
   const dispatch = useAppDispatch();
 
+  console.log('authTOken', authToken, isLoggedIn);
+
   useEffect(() => {
     dispatch(loadAuthData());
     const timer = setTimeout(() => {
       if (authToken && isLoggedIn) {
-        navigation.replace('AppNavigation');
-      } else {
         navigation.replace('AuthNavigation');
+      } else {
+        navigation.replace('AppNavigation');
       }
     }, 3000);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [authToken, isLoggedIn]);
+
   return (
     <BaseView showHeader={false} contentContainerStyle={styles.container}>
       <Image source={Images.pngThemeIcon} style={styles.imgLogo} />

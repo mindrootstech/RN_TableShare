@@ -3,6 +3,16 @@ import { ColorsApp } from './colors';
 
 export const Fonts = StyleSheet.create({
   // Noto Sans Light
+  fontNotoSansLight8: {
+    fontFamily: 'NotoSans-Light',
+    fontSize: 8,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansLight9: {
+    fontFamily: 'NotoSans-Light',
+    fontSize: 9,
+    color: ColorsApp.txtDescColor,
+  },
   fontNotoSansLight10: {
     fontFamily: 'NotoSans-Light',
     fontSize: 10,
@@ -20,6 +30,16 @@ export const Fonts = StyleSheet.create({
   },
 
   // Noto Sans Regular
+  fontNotoSansRegular8: {
+    fontFamily: 'NotoSans-Regular',
+    fontSize: 8,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansRegular10: {
+    fontFamily: 'NotoSans-Regular',
+    fontSize: 10,
+    color: ColorsApp.txtDescColor,
+  },
   fontNotoSansRegular12: {
     fontFamily: 'NotoSans-Regular',
     fontSize: 12,
@@ -32,6 +52,16 @@ export const Fonts = StyleSheet.create({
   },
 
   // Noto Sans Medium
+  fontNotoSansMedium8: {
+    fontFamily: 'NotoSans-Medium',
+    fontSize: 8,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansMedium10: {
+    fontFamily: 'NotoSans-Medium',
+    fontSize: 10,
+    color: ColorsApp.txtDescColor,
+  },
   fontNotoSansMedium12: {
     fontFamily: 'NotoSans-Medium',
     fontSize: 12,
@@ -42,6 +72,16 @@ export const Fonts = StyleSheet.create({
   fontNotoSansSemiBold8: {
     fontFamily: 'NotoSans-SemiBold',
     fontSize: 8,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansSemiBold9: {
+    fontFamily: 'NotoSans-SemiBold',
+    fontSize: 9,
+    color: ColorsApp.txtDescColor,
+  },
+  fontNotoSansSemiBold10: {
+    fontFamily: 'NotoSans-SemiBold',
+    fontSize: 10,
     color: ColorsApp.txtDescColor,
   },
   fontNotoSansSemiBold12: {
