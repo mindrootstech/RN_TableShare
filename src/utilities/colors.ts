@@ -1,3 +1,5 @@
+import { green } from 'react-native-reanimated/lib/typescript/Colors';
+
 export const ColorsApp = {
   BlackOpacity: (opacity = '0.5') => `rgba(0, 0, 0, ${opacity})`,
   WHiteOpacity: (opacity = '0.5') => `rgba(255, 255, 255, ${opacity})`,
@@ -25,4 +27,5 @@ export const ColorsApp = {
   orangeFD: '#FDE68C',
   orange9F: '#9F5729',
   peach: '#FFE7B9',
+  green50: '#50BA77',
 };

@@ -18,6 +18,7 @@ type IPropsButtonGlobal = PropsWithChildren<{
   disabled?: boolean;
   onPress?: () => void;
   icon?: ReactNode;
+  styleIcon?: ViewStyle;
   activeOpacity?: number;
 }>;
 
@@ -55,6 +56,7 @@ const ButtonCustom = ({
   styleTitle,
   disabled,
   onPress,
+  styleIcon,
   icon,
   activeOpacity = 0.8,
 }: IPropsButtonGlobal) => {
@@ -66,7 +68,7 @@ const ButtonCustom = ({
       onPress={onPress}
     >
       <View style={styles.containerContent}>
-        {icon && <View style={styles.iconWrapper}>{icon}</View>}
+        {icon && <View style={[styles.iconWrapper, styleIcon]}>{icon}</View>}
         <Text style={[styles.title, styleTitle]}>{title}</Text>
       </View>
     </TouchableOpacity>

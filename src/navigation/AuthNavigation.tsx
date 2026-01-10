@@ -36,7 +36,11 @@ const AuthNavigation = () => {
       }}
     >
       <Stack.Screen name="OnBoarding" component={OnBoarding} />
-      <Stack.Screen name="Login" component={Login} />
+      <Stack.Screen
+        name="Login"
+        component={Login}
+        options={{ gestureEnabled: false }}
+      />
       <Stack.Screen name="SignUp" component={SignUp} />
     </Stack.Navigator>
   );

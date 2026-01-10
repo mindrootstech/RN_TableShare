@@ -14,9 +14,11 @@ function App(): React.JSX.Element {
   return (
     <SafeAreaProvider style={styles.container}>
       <Provider store={reduxStore}>
-        <I18nextProvider i18n={i18n}>
-          <Welcome />
-        </I18nextProvider>
+        <NavigationContainer>
+          <I18nextProvider i18n={i18n}>
+            <Welcome />
+          </I18nextProvider>
+        </NavigationContainer>
       </Provider>
     </SafeAreaProvider>
   );

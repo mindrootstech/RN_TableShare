@@ -40,7 +40,13 @@ const ItemPopularProduct = ({ item, containerStyle }: Props) => {
         </View>
         <View style={styles.containerLocationShop}>
           <View style={styles.containerShop}>
-            <Images.svgShopLocation />
+            {/* <Images.svgShopLocation /> */}
+            <View style={styles.containerImgShop}>
+              <Image
+                source={Images.pngShopLocation}
+                style={styles.imgShopIcon}
+              />
+            </View>
             <View>
               <Text style={styles.txtStoreName}>{item.storeName}</Text>
               <Text style={styles.txtBroadway}>Broadway</Text>
@@ -54,9 +60,9 @@ const ItemPopularProduct = ({ item, containerStyle }: Props) => {
         </View>
       </View>
       <View style={styles.containerPrice}>
-        <View style={styles.containerQuantityPrice}>
+        <View style={styles.containerUnitPrice}>
           <Text style={styles.txtPrice}>${item.price}.00</Text>
-          <Text style={styles.txtQuantity}>/lb</Text>
+          <Text style={styles.txtUnit}>/lb</Text>
         </View>
         <ButtonCustom
           title="Add to Cart"
@@ -138,6 +144,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 6,
   },
+  containerImgShop: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 17,
+    width: 17,
+    borderRadius: 2,
+    backgroundColor: ColorsApp.aliceBlue,
+  },
+  imgShopIcon: {
+    height: 10,
+    width: 10,
+  },
   txtStoreName: {
     ...Fonts.fontNotoSansRegular8,
   },
@@ -155,14 +173,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  containerQuantityPrice: {
+  containerUnitPrice: {
+    marginTop: 5,
     flexDirection: 'row',
     alignItems: 'center',
   },
   txtPrice: {
     ...Fonts.fontNotoSansSemiBold10,
   },
-  txtQuantity: {
+  txtUnit: {
     ...Fonts.fontNotoSansLight10,
   },
   btnAddTo: {

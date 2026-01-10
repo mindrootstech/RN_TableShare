@@ -5,19 +5,22 @@ import Animated, {
   useSharedValue,
 } from 'react-native-reanimated';
 
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {
   arrOnBoardingData,
   HEIGHT_SCREEN,
   WIDTH_SCREEN,
 } from '../../../common/constants';
+import { AuthStackRoots } from '../../../navigation/AuthNavigation';
+// import { useAppDispatch } from '../../../redux/reduxStore';
 import { ColorsApp } from '../../../utilities/colors';
 import ItemOnboardingList from './component/itemOnboardingList';
 import ItemProgessDots from './component/itemProgessDots';
-import { useAppDispatch } from '../../../redux/reduxStore';
-import { loginUser } from '../../../redux/slices/authSlice';
 
-const OnBoarding = ({ navigation }: any) => {
-  const dispatch = useAppDispatch();
+type Props = NativeStackScreenProps<AuthStackRoots, 'OnBoarding'>;
+
+const OnBoarding = ({ navigation }: Props) => {
+  // const dispatch = useAppDispatch();
   const scrollX = useSharedValue(0);
   const flatListRef = useRef<Animated.FlatList<any>>(null);
 
@@ -35,14 +38,15 @@ const OnBoarding = ({ navigation }: any) => {
         animated: true,
       });
     } else {
-      console.log('hhh');
-      dispatch(
-        loginUser({
-          isLoggedIn: true,
-          authToken: 'signin',
-          isOnBoarding: true,
-        }),
-      );
+      navigation.navigate('Login');
+      // console.log('hhh');
+      // dispatch(
+      //   loginUser({
+      //     isLoggedIn: true,
+      //     authToken: 'signin',
+      //     isOnBoarding: true,
+      //   }),
+      // );
     }
   };
 

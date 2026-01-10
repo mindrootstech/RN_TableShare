@@ -36,17 +36,33 @@ const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {},
-  extraReducers: builder => {
+  extraReducers: (builder) => {
+    // builder
+    //   .addCase(loginUser.fulfilled, (state, action) => {
+    //     state = { ...state, ...action.payload };
+    //   })
+    //   .addCase(logoutUser.fulfilled, state => {
+    //     state = initialState;
+    //   })
+    //   .addCase(loadAuthData.fulfilled, (state, action) => {
+    //     if (action.payload) {
+    //       state = action.payload;
+    //     }
+    //   });
     builder
       .addCase(loginUser.fulfilled, (state, action) => {
-        state = { ...state, ...action.payload };
+        state.authToken = action.payload?.authToken ?? '';
+        state.isLoggedIn = true;
       })
-      .addCase(logoutUser.fulfilled, state => {
-        state = initialState;
+
+      .addCase(logoutUser.fulfilled, () => {
+        return initialState;
       })
+
       .addCase(loadAuthData.fulfilled, (state, action) => {
         if (action.payload) {
-          state = action.payload;
+          state.authToken = action.payload.authToken ?? '';
+          state.isLoggedIn = true;
         }
       });
   },

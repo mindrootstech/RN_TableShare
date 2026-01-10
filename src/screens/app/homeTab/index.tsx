@@ -30,6 +30,7 @@ const HomeTab = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.containerMain}>
         <ScrollView
+          keyboardShouldPersistTaps={'handled'}
           bounces={false}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.scrollView}

@@ -46,26 +46,6 @@ const ItemProducts = ({ item, width, onPressProduct }: Props) => {
 export default ItemProducts;
 
 const styles = StyleSheet.create({
-  // container: {
-  //   padding: 10,
-  //   marginRight: 15,
-  //   marginLeft: 12,
-  //   borderRadius: 6,
-  //   backgroundColor: ColorsApp.white,
-  // },
-  // containerImg: {
-  //   height: 112,
-  //   width: 144,
-  //   borderRadius: 5,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   backgroundColor: ColorsApp.theme,
-  // },
-  // imgProduct: {
-  //   height: 100,
-  //   width: 128,
-  //   borderRadius: 5,
-  // },
   container: {
     padding: 10,
     borderRadius: 6,
@@ -77,7 +57,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: ColorsApp.theme,
+    backgroundColor: ColorsApp.aliceBlue,
   },
   imgProduct: {
     height: 100,

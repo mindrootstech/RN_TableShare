@@ -22,6 +22,11 @@ import SVGCamera from './svg/svgCamera.svg';
 import SVGLocationPinWhite from './svg/svgLocationPinWhite.svg';
 import SVGEyeOpen from './svg/svgEyeOpen.svg';
 import SVGEdit from './svg/svgEdit.svg';
+import SVGExclamation from './svg/svgExclamation.svg';
+import SVGShoppingBag from './svg/svgShoppingBag.svg';
+import SVGPlusIcon from './svg/svgPlusIcon.svg';
+import SVGRecipt from './svg/svgRecipt.svg';
+import SVGDelete from './svg/svgDelete.svg';
 
 const Images = {
   svgBasket: SVGBasket,
@@ -48,6 +53,11 @@ const Images = {
   svgLocationPinWhite: SVGLocationPinWhite,
   svgEyeOpen: SVGEyeOpen,
   svgEdit: SVGEdit,
+  svgExclamation: SVGExclamation,
+  svgShoppingBag: SVGShoppingBag,
+  svgPlusIcon: SVGPlusIcon,
+  svgRecipt: SVGRecipt,
+  svgDelete: SVGDelete,
 
   pngThemeIcon: require('../assets/png/pngThemeIcon.png'),
   pngBackIcon: require('../assets/png/pngBackIcon.png'),
@@ -67,6 +77,8 @@ const Images = {
   pngCupCakes: require('../assets/png/pngCupCakes.png'),
   pngCarrots: require('../assets/png/pngCarrots.png'),
   pngCamera: require('../assets/png/pngCamera.png'),
+  pngShopLocation: require('../assets/png/pngShopLocation.png'),
+  pngRightArrow: require('../assets/png/pngRightArrow.png'),
 };
 
 export default Images;

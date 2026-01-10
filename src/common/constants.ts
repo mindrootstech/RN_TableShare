@@ -18,6 +18,10 @@ export const authCodeExpire = 'Unauthenticated.';
 export const activeOpacityTouchable = 0.8;
 export const HEIGHT_SCREEN = Dimensions.get('screen').height;
 export const WIDTH_SCREEN = Dimensions.get('screen').width;
+const HORIZONTAL_PADDING = spaceLeftRight;
+const COLUMN_GAP = 15;
+export const ITEM_WIDTH =
+  (WIDTH_SCREEN - HORIZONTAL_PADDING * 2 - COLUMN_GAP) / 2 - 20;
 
 export const arrOnBoardingData: IArrOnBoardingData[] = [
   {

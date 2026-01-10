@@ -8,6 +8,7 @@
     "lint": "eslint .",
     "start": "react-native start",
     "ios:iPhone17": "npm run ios -- --simulator='iPhone 17'",
+    "ios:iPhone17ProMax": "npm run ios -- --simulator='iPhone 17 Pro Max'",
     "test": "jest"
   },
   "dependencies": {

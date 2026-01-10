@@ -2,29 +2,25 @@ import React, { useState } from 'react';
 import { FlatList, StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import {
   arrCategoriesBar,
   arrPopularProducts,
+  ITEM_WIDTH,
   spaceLeftRight,
-  WIDTH_SCREEN,
 } from '../../../common/constants';
+import { AppStackRoots } from '../../../navigation/AppNavigation';
 import { Fonts } from '../../../utilities/fonts';
 import GradientView from '../../components/gradientView';
 import SearchBarCustom from '../../components/searchBarCustom';
 import ItemCategories from './components/itemCategories';
 import ItemProducts from './components/itemProducts';
 import ModalDietaryPref from './components/modalDietaryPref';
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { AppStackRoots } from '../../../navigation/AppNavigation';
 
 type Props = NativeStackScreenProps<AppStackRoots, 'ProductsTab'>;
 const ProductsTab = ({ navigation }: Props) => {
   const [selectedId, setSelectedId] = useState<string>('1');
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const HORIZONTAL_PADDING = spaceLeftRight;
-  const COLUMN_GAP = 15;
-  const ITEM_WIDTH =
-    (WIDTH_SCREEN - HORIZONTAL_PADDING * 2 - COLUMN_GAP) / 2 - 20;
 
   const onPressFilterIcon = () => {
     setIsModalVisible(true);
@@ -40,7 +36,7 @@ const ProductsTab = ({ navigation }: Props) => {
 
   return (
     <GradientView>
-      <SafeAreaView style={styles.container}>
+      <SafeAreaView style={styles.container} edges={['top']}>
         <Text style={styles.txtProducts}>Products</Text>
         <SearchBarCustom
           placeholder="Search fresh local products"
@@ -106,9 +102,12 @@ const styles = StyleSheet.create({
   },
   listContent: {
     paddingBottom: 120,
+    // backgroundColor: 'green',
   },
   columnWrapper: {
     gap: 25,
+    // backgroundColor: 'red',
+    // borderWidth: 1,
     marginLeft: 15,
     // justifyContent: 'space-between',
     marginBottom: 15,

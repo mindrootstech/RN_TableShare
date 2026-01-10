@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import {
   Image,
   ImageBackground,
+  Keyboard,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -24,6 +25,8 @@ import { Fonts } from '../../../utilities/fonts';
 import ButtonCustom from '../../components/buttonCustom';
 import TextInputCustom from '../../components/textInputCustom';
 import ModalForgotPass from './components/modalForgotPass';
+import { useAppDispatch } from '../../../redux/reduxStore';
+import { loginUser } from '../../../redux/slices/authSlice';
 
 type Props = NativeStackScreenProps<AuthStackRoots, 'Login'>;
 const Login = ({ navigation }: Props) => {
@@ -31,6 +34,7 @@ const Login = ({ navigation }: Props) => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
 
   const textHighlight = `Don’t have an account? Register Now`;
   const mainKeywords = new Highlight({
@@ -51,7 +55,17 @@ const Login = ({ navigation }: Props) => {
   };
 
   const onPressModal = () => {
+    Keyboard.dismiss();
     setIsModalVisible(!isModalVisible);
+  };
+
+  const onPressLogin = () => {
+    dispatch(
+      loginUser({
+        authToken: 'STATIC_LOGIN_TOKEN_123',
+        isLoggedIn: true,
+      }),
+    );
   };
 
   return (
@@ -84,6 +98,7 @@ const Login = ({ navigation }: Props) => {
               label={t(TranslationKeys.PASSWORD)}
               placeholder={t(TranslationKeys.ENTER_YOUR_PASS)}
               value={password}
+              keyboardType="default"
               onChangeText={(text) => onChangeTextPassword(text)}
             />
           </View>
@@ -98,7 +113,7 @@ const Login = ({ navigation }: Props) => {
           </TouchableOpacity>
         </View>
 
-        <ButtonCustom title={t(TranslationKeys.LOGIN)} />
+        <ButtonCustom title={t(TranslationKeys.LOGIN)} onPress={onPressLogin} />
         <HighlightedText
           highlights={[mainKeywords]}
           style={styles.containerRegisterNow}
